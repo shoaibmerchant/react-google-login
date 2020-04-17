@@ -81,6 +81,12 @@ class GoogleLogin extends Component {
     }
   }
   enableButton() {
+    const { onLoad } = this.props;
+
+    if (onLoad) {
+      onLoad(true);
+    }
+
     this.setState({
       disabled: false
     })
